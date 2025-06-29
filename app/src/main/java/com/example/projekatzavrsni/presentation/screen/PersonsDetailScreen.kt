@@ -68,7 +68,7 @@ fun PersonsDetailScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Detalji") },
+                title = { Text("Detalji osoba") },
                 navigationIcon = {
                     IconButton(onClick = { navController.navigateUp() }) {
                         Icon(Icons.Default.ArrowBack, contentDescription = "Nazad")

@@ -29,7 +29,6 @@ fun OnboardingScreen(navController: NavController) {
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.secondary)
     ) {
-        // Custom top header with image and text, now respects camera (status bar)
         Row(
             modifier = Modifier
                 .fillMaxWidth()

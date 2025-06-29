@@ -49,24 +49,6 @@ fun PersonsScreen(
             .padding(start = 20.dp, top = 55.dp, end = 20.dp, bottom = 20.dp)
     ) {
 
-        TextField(
-            value = searchQuery,
-            onValueChange = { viewModel.updateSearchQuery(it) },
-            label = { Text("Pretraži po općini") },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(bottom = 8.dp)
-        )
-
-        TextField(
-            value = cantonQuery,
-            onValueChange = { viewModel.updateCantonQuery(it) },
-            label = { Text("Pretraži po kantonu") },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(bottom = 8.dp)
-        )
-
         ExposedDropdownMenuBox(
             expanded = sortExpanded,
             onExpandedChange = { sortExpanded = !sortExpanded }
@@ -100,7 +82,26 @@ fun PersonsScreen(
             }
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(8.dp))
+
+        TextField(
+            value = cantonQuery,
+            onValueChange = { viewModel.updateCantonQuery(it) },
+            label = { Text("Pretraži po kantonu") },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 8.dp)
+        )
+
+        TextField(
+            value = searchQuery,
+            onValueChange = { viewModel.updateSearchQuery(it) },
+            label = { Text("Pretraži po općini") },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 8.dp)
+        )
+
 
         Text(
             text = "Prikaz podataka iz posljednjeg dostupnog ažuriranja: 03.06.2025.",

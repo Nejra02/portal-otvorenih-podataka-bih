@@ -69,7 +69,7 @@ fun NewbornsDetailScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Detalji novorođenčeta") },
+                title = { Text("Detalji novorođenčadi") },
                 navigationIcon = {
                     IconButton(onClick = { navController.navigateUp() }) {
                         Icon(Icons.Default.ArrowBack, contentDescription = "Nazad")
