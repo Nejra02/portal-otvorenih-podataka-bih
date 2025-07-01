@@ -45,8 +45,6 @@ fun NewbornScreen(
 
     if (error != null) {
         Text("Greška: $error", color = MaterialTheme.colorScheme.error)
-    } else if (newborns.isEmpty()) {
-        Text("Nema podataka za traženi datum.", modifier = Modifier.padding(16.dp))
     } else {
         Column(
             modifier = Modifier
